@@ -18,7 +18,12 @@ Gem::Specification.new do |s|
     "README"
   ]
   s.files = [
-    "README"
+    ".gitignore",
+     "README",
+     "Rakefile",
+     "VERSION",
+     "bin/cssex",
+     "cssex.gemspec"
   ]
   s.homepage = %q{http://github.com/twoism/cssex}
   s.rdoc_options = ["--charset=UTF-8"]
