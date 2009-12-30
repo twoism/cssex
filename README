@@ -1,0 +1,27 @@
+# install nokogiri
+$ sudo gem install nokogiri
+
+# copy cssex to your bin path
+$ cp cssex /usr/local/bin/cssex 
+
+# usage
+$ cssex some_html_file.html | pbcopy
+
+# copies the css skeleton for your file to the clipboard...
+
+#main{}
+	#left_rail{}
+		#logo{}
+		#blurb{}
+		#utility_block{}
+		#contributors_block{}
+		#categories_block{}
+		#tags_block{}
+	#right_main{}
+		#blog_roll_header{}
+		#blog_roll{}
+			.blog_entry{}
+				.preview_image{}
+				.entry_info{}
+					.date{}
+					.attribution{}

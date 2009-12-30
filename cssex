@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+raise "No file specified!" unless ARGV.first
+
+%w{rubygems nokogiri open-uri}.each { |lib| require lib }
+
+def skeletize nodes
+  nodes.each do |node|
+    next unless node["class"] || node["id"]
+    
+    str = "\t" * node.path.split("/").count
+    str << "##{node["id"]}"     if node["id"]
+    str << ".#{node["class"]}"  if node["class"]
+    str << "{}"
+    puts str
+    
+    skeletize node.children 
+  end
+end
+
+@doc = Nokogiri::HTML(open(ARGV.first))
+skeletize @doc.css('body').children
