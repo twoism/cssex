@@ -1,6 +1,5 @@
 # install nokogiri & cssex
-$ sudo gem install nokogiri
-$ sudo gem install cssex
+$ sudo gem install nokogiri cssex
 
 # usage
 $ cssex some_html_file.html | pbcopy
