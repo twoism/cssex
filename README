@@ -1,8 +1,6 @@
-# install nokogiri
+# install nokogiri & cssex
 $ sudo gem install nokogiri
-
-# copy cssex to your bin path
-$ cp cssex /usr/local/bin/cssex 
+$ sudo gem install cssex
 
 # usage
 $ cssex some_html_file.html | pbcopy
